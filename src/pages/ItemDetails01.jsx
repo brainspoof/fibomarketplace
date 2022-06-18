@@ -91,7 +91,7 @@ const ItemDetails01 = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="page-title-heading mg-bt-12">
-                                <h1 className="heading text-center">{nft?.name}</h1>
+                                <h1 className="heading text-center">{nft?.name ? nft?.name : nft?.asset_contract?.name}</h1>
                             </div>
                             <div className="breadcrumbs style2">
                                 <ul>
@@ -110,7 +110,7 @@ const ItemDetails01 = () => {
                         <div className="col-xl-6 col-md-12">
                             <div className="content-left">
                                 <div className="media">
-                                    <img className='img-fluid w-100' src={nft?.asset_contract?.image_url} alt="Axies" />
+                                    <img className='img-fluid w-100' src={nft?.image_url ? nft?.image_url : nft?.asset_contract?.image_url} alt="Axies" />
                                 </div>
                             </div>
                         </div>

@@ -20,8 +20,8 @@ function getNFTdata(nfts){
   
     for(let nft of nfts){
       data.push({
-        img: nft.asset_contract.image_url,
-        title: nft.asset_contract.name,
+        img: nft?.image_url ? nft?.image_url : nft?.asset_contract?.image_url,
+        title: nft?.name ? nft?.name : nft?.asset_contract?.name,
         tags: nft.asset_contract.symbol,
         imgAuthor: nft.owner.profile_img_url,
         nameAuthor: nft.owner.user.username,
